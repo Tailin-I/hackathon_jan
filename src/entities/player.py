@@ -6,7 +6,7 @@ from ..core.game_data import game_data
 
 
 class Player(Entity):
-    def __init__(self, texture_dict, input_manager, scale=0.8):
+    def __init__(self, texture_dict, input_manager, scale=1):
         # Собираем все текстуры в один список
         all_textures = []
         for direction in ["up", "down", "left", "right"]:

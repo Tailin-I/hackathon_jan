@@ -20,7 +20,7 @@ class GameData:
             "id": "player",
             "name": "Игрок",
             "type": "player",
-            "position": {"x": 3, "y": 7, "map": "itcube0"},
+            "position": {"x": 3, "y": 7, "map": "house"},
             # "position": {"x": 93, "y": 35, "map": "itcube1floor"},
             # "position": {"x": 10, "y": 35, "map": "itcube2floor"},
             "level": 1,
