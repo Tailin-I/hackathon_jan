@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="23" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="13">
  <tileset firstgid="1" source="tiles.tsx"/>
- <tileset firstgid="133" source="tiles.tsx"/>
  <layer id="1" name="ground" width="23" height="20">
   <data encoding="base64" compression="zlib">
-   eJz7xMDA8GkUj+JRPIpH8SgexXgxAIDisug=
+   eJzLY2BgyBvFo3gUj+JRPIpHMV4MAA/4xak=
   </data>
  </layer>
  <layer id="2" name="walls" width="23" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjZmRgYCYSX2YgXi0M0wKMmj1q9qjZo2aPmj1qNi6zkfFNHOKEMDZ9AKDjA8I=
+   eJyrZ2BgqCcS+5OgFoZpAUbNHjV71OxRs0fNHjUbl9nIOBSHOCGMTR8AMdsoKw==
   </data>
  </layer>
  <layer id="3" name="containers" width="23" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUkAseD7QDRsEoGAFgsOQzAP3FAcc=
+   eJxjYBgFo2AUkAviB9oBo2AUjAK6AQB9TwBg
   </data>
  </layer>
  <layer id="4" name="collisions" width="23" height="20">
   <data encoding="base64" compression="zlib">
-   eJz7w8DA8IeGmBZg1OxRs0fNHjV71OxRs3GZTSsMAM7eULk=
+   eJyrYGBgqKAhpgUYNXvU7FGzR80eNXvUbFxm0woDAH6mJnE=
   </data>
  </layer>
  <layer id="8" name="top_layer" width="23" height="20">
@@ -35,8 +34,8 @@
  <objectgroup id="6" name="events">
   <object id="7" name="to_murmansk" type="teleport" x="150.003" y="14" width="55.333" height="24.667">
    <properties>
-    <property name="target_map" value="itcube1floor"/>
-    <property name="target_x" type="int" value="68"/>
+    <property name="target_map" value="murmansk"/>
+    <property name="target_x" type="int" value="30"/>
     <property name="target_y" type="int" value="3"/>
    </properties>
   </object>
@@ -44,12 +43,6 @@
    <properties>
     <property name="lock" value="&lt;&lt;&gt;&gt;"/>
     <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5"/>
-   </properties>
-  </object>
-  <object id="11" name="fatigue_killer_chest" type="chest" x="174.383" y="288.66" width="46" height="20">
-   <properties>
-    <property name="lock" value="&gt;&gt;&gt;&gt;&lt;&gt;"/>
-    <property name="loot" value="fatigue_killer:7"/>
    </properties>
   </object>
   <object id="12" name="cheat" type="chest" x="11.631" y="133.594" width="27" height="40.272">
