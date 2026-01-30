@@ -336,7 +336,6 @@ class CheatConsoleState(BaseState):
 
             self.text_to_draw = ["Нагулялся?",
                                  "Ну пока.."]
-        else:
-            self.text_to_draw = ["ты прав!",
-                                 "вот решение:",
-                                 "..."]
+        elif command == "END":
+            self.gsm.switch_to("finish")
+

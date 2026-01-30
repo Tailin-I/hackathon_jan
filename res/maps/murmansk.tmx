@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="16">
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="24">
  <tileset firstgid="1" source="tiles.tsx"/>
  <layer id="2" name="ground" width="49" height="50">
   <data encoding="base64" compression="zlib">
@@ -12,31 +12,50 @@
   </data>
  </layer>
  <objectgroup id="6" name="entities">
-  <object id="13" name="валентина cтепановна" type="npc" x="208.667" y="263.333">
+  <object id="16" name="валентина степановна" type="npc" x="223" y="342">
    <properties>
+    <property name="active_topic" value="iii"/>
     <property name="loot" value="healing_potion:35"/>
-    <property name="speed" type="int" value="0"/>
+    <property name="speed" type="int" value="1"/>
    </properties>
    <point/>
   </object>
+  <object id="20" name="автор" type="npc" x="784" y="802">
+   <properties>
+    <property name="active_topic" value="nnn"/>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="21" x="770" y="724" width="36" height="105.333"/>
  </objectgroup>
- <objectgroup id="7" name="events"/>
- <objectgroup id="8" name="zones">
+ <objectgroup id="7" name="events">
   <object id="15" name="cheat" type="chest" x="283.167" y="24.1973" width="60.6667" height="30.9387">
    <properties>
     <property name="lock" value="&gt;"/>
     <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5, flash_quest:1, sonya_ring:1, blue_boots:1, orc_weapon:1, simple_sword:1"/>
    </properties>
   </object>
+  <object id="23" name="to_murmansk" type="teleport" x="602.833" y="9.1665" width="55.333" height="24.667">
+   <properties>
+    <property name="target_map" value="moscow"/>
+    <property name="target_x" type="int" value="26"/>
+    <property name="target_y" type="int" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="zones">
+  <object id="18" x="26" y="5" width="357" height="491"/>
  </objectgroup>
  <layer id="10" name="walls" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmktOAzEMhrPhABygRwDEWwjxfgmEUDewYNUtd4E93BYHGmlkYjsPZxqj+aRf6jRtZ74o44yszpxzs3+QDchmo2y5tgSHo8jYIvJ68edTMscF38mBc9DCgsOaMG7BYV0Yt+CAeYd8DI4ph23IHmS38nwxB2ltSHxCvgbHlMMJ5BxyVnm+mENYG3g+MdJ4gHK4h7xAnhN+g4NbS3g+c8fHwlptja1zaw6xGogdUtd4CmHOKIfa2hHADpprPMwZ5SDtK6lYW0sxrDjsQw6WOURjJQ65+4aGwwXkEnINuUJjJQ65+4aGw9Myr5A5GuMctGrUKu8HrRqV4vBW8ftW7mmOFg5477LogPcuiw6YyUEm1aHm+SzHoeQ8MYfYvsA9n0n9tbuM6yl5Dow55O4LrdeKhMb9MDnU09Ih9I92XH0PiSM43Ljy/jTXPzp1Oj0kjuDg8R5cfbkl3qfqju8fPbjf/tFjm8v/YeigjXfw1+/7YBoO1N7R0kEbau9o4aDVc0mlhYNWzyWVEoex51mixGHseZawdE9TTA590KtDTt3o1SGnbnAOvdVQCs6htxpK0etaymFy6INV/29KK9//pEr3
+   eJztms1KAzEQx3PxAXyAPoJK/USkfltRRHrRg6defRe969s6sQ2EmMlkksl2IvuDP3SbdpvfMpssQyfGmInSzBmf3YHsNsqeaYtzOI2MLSOvl38+RXNW8B0OKQcpenDYIsZ7cNgmxntwCPmAfHrHmMMUcgg5qPy9mINfG+F8cviCfHvHmMMMcgm5YJ4/JObg10Y4H59cP8zhAfIKeck4R4qaWkr5DUlva2tsDezNIbYGxhxK7uMY7pphDtS+kkvMQarO3TXDHKh9JZfeailGiQO31iQcjiDH65wEYyUOVK3l7tMcriDXkFvITTBGObTcpzk8r/MGWQRjlIPE/a3xfuCS4/BecX4tDjW0cAj3rk051OzV4d61KQfJZ9IeaylEi0PN8xnHoeR3ch1Sz2dUf+2eMZ+S50CJWmpdKxSjw4r/7OD6R/umvoeUwjncmfL+dKp/dG5kekgpnIPFeqTWlznyPrbu2P7Ro1n1j57aTP8X30Ea62Dnb/tgEg7Y3tHSQRps72jhINVzyaWFg1TPJZcSh6GvM0WJw9DXmaKnexpjdNCBVgfOuqHVgbNupBy0raEYKQdtayiG1lriMDrooNV/p4bODylFSyA=
   </data>
  </layer>
  <layer id="11" name="collisions" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmNsOgCAMQ/lsPt9XJZNt0MEGa0KiUVoO4aa1lFKzsMVSvZxKXI+0ZycDMsNSCAaubjLI8tFjqfX780ZlUz4oT85vBQPnL83fwdA+4+ruVrS1tdfXJzEgebi9HZlzGoOFIu5xVAbC46+tIwzaNTcZvp5aBtQY2/0NtIph9twcYU5z/hZn7949Wskgz7DUTQyz64bFu+861J6kGdPt/kMVTXu0kjKgc5FCzIdkmJclw+icGMmfzfHCQGVSbdCsOzsYrLytz7/WfYTUSobVfXIrg7exdyuDNyWDD3ll0J79T2bwyEbpdIYoSgYfkvxXiVAegvK7CQ==
+   eJztmNsOwyAMQ/vZfP4eO6EUSGKTcLGE1ErF5kxAYOV5nnJbtzHVyinCs2U8kQzIDKYQDL2+l2EsHz2Xar8vb1S25FM/azNWYhjNj2DQ9o3WanvrVx3bkQHF1KvtKLZdGdDKWOMs33vVOgczGEZrnEYeBmadtnjOYpA8mMqypr3n5gwMXn/G2bv1jlZvnVg9W+9oMRikDKZOWg/efYPx7X8fL0Ndf6SmGY9WiLkUfZe7DK9HpJgM1jVhyffmZGGQMqUxaPadCAaWNyqDeT+YpZkMs3+TUxmyzb1TGbLpMuRQVgbtnWNnhoxsknZnWEWXIYdG/ldZof0Acgi7CQ==
   </data>
  </layer>
  <layer id="12" name="top_layer" width="49" height="50">

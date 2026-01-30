@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="28">
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="39">
  <tileset firstgid="1" source="tiles.tsx"/>
  <layer id="2" name="ground" width="49" height="50">
   <data encoding="base64" compression="zlib">
@@ -11,7 +11,40 @@
    eJztzgENAAAIA6A3tX8LY3w6SEDCN9MOAAAAAAAAAAAApyyuFwBg
   </data>
  </layer>
- <objectgroup id="6" name="entities"/>
+ <objectgroup id="6" name="entities">
+  <object id="16" name="людмила" type="npc" x="598.833" y="734.5">
+   <properties>
+    <property name="active_topic" value="qwe"/>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="17" name="виктор" type="npc" x="534.333" y="730">
+   <properties>
+    <property name="active_topic" value="uio"/>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="28" name="автор" type="npc" x="672.5" y="64">
+   <properties>
+    <property name="active_topic" value="nnn"/>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="33" name="лукашенко" type="npc" x="463.273" y="111.091">
+   <properties>
+    <property name="active_topic" value="kkk"/>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="7" name="events"/>
  <objectgroup id="8" name="zones">
   <object id="15" name="cheat" type="chest" x="283.167" y="24.1973" width="60.6667" height="30.9387">
@@ -20,31 +53,20 @@
     <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5, flash_quest:1, sonya_ring:1, blue_boots:1, orc_weapon:1, simple_sword:1"/>
    </properties>
   </object>
-  <object id="16" name="Людмила" type="npc" x="584" y="749">
-   <properties>
-    <property name="loot" value="healing_potion:35"/>
-    <property name="speed" type="int" value="0"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="17" name="Виктор" type="npc" x="539" y="726">
-   <properties>
-    <property name="loot" value="healing_potion:35"/>
-    <property name="speed" type="int" value="0"/>
-   </properties>
-   <point/>
-  </object>
   <object id="24" name="ЗВ" x="455" y="657" width="198" height="117"/>
   <object id="26" name="ЗЛ" x="431" y="611" width="272" height="167"/>
+  <object id="31" x="457.212" y="71.6364" width="60.6667" height="42"/>
+  <object id="38" x="414.5" y="31" width="103" height="102"/>
+  <object id="37" x="593" y="25.6667" width="168.667" height="50.6667"/>
  </objectgroup>
  <layer id="10" name="walls" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmEtOxDAMhrPhABxgjgCsEWvgGgOIQwCLrpFgx3PHMBfFSI0UeZzYJm5ewy/9UtvUnX6Nx3msnHOrAXwEPl7IJ25ZeYZTom1NHK937uJ19ocYjVIMVqIYrsDXs2+Ez4nFWDAcMO0Uwx34fvaD8HdiMRYMh0w7xbBFligWs0QuPYGfg/MYwxv43ekYqBiKgcsNTh/gz+Bc0g+34EfGmn7wuYG/JxbXnmKYwN+zJ4XDmBSDF/6e2vaUft/hBfwavJ/PkylxLYyRMFgplktf4I3bzZGUwxivWgyWwgzSHJfI14bSDDk5juVrw6hzDUvtK4N23GiRQTtu1GSwqlE1GaxqVIu5pFWPDHje2yMDXhP1yIDVMkPO+sFSUgZqbSetWzUYqO/LrftTusyIlYhiyBkXqP5qJZekovqrNwZK/wy8RmI4d/we/IXgHsql6lLPChk0+21ac8rZH8UMMWn2dbEkDDljaCsMMUn6p3UGSf9gBrwvTu15Uords3V5DBJJ+6FljchQKpcmdJxTl2v9p8NrqWf3xIDXLP68F4aU9pWh1HxpKYaSspwvjjT37t0/aN3Fug==
+   eJztmE1OwzAQRr3hABygRyisEWvKNQqIQwCLrCuVHb87Si+KI8WSNR3PjDtOPA590ie1SdzkaRzb9cI5t5hBlj4XI+XSjUtwuELOrZHP64OreK6PaJMD5VAKzOHO537Ig/B3Um1KOJwx5zGHJ5/nIS/C+6TalHA4Z85jDnsQCak2Uoetz6vwXpCUw4fPp8tzwNpgDljf+PL5Ft4LIqnDo8+GSU4duL5BgdULc+h8fod0GYnbUA4apPXqn+HN5z16vtBPOuJY3CZQa2zt+8KPz84d9hEqcZtALYeSjOkQxoaWHcLY0LJDwIpD6TmuJFIHbsykHK04cFCOrThQnBx4MAfN+4tRw0GzRu2B616rfYmqFVz3WnXIqZVVhxysOHD/+ymsOGj+290q2koo3ZewetWswzHzBFavmg7aeSJg5X3QcHLgCQ43jt+DXwmuwTLVuNQysUPOfltuODRzKHRIkbOvC5E4aOZQKw4pJPWx7iCpD3SA++LYnidG6pq90zlIkNbBMnN0mKovdeCzZlyu9U7Hx6jfbskBrpHD91YcKP6rw1TrpbEcpqTkenFOa+/W8wcROMEm
   </data>
  </layer>
  <layer id="11" name="collisions" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmOEOgCAIhH1sH7+/zmlAcCDkba7WjPNTxFZvrfXbjmmz+uJ+1Y9SJIOVMjBQ716GmFya40UwaHlOYqDWh7t+kblkxeDJhdLb/GRmsI4/Mljy9OmKUkUGlAdSf2WQ1tzLQEtzxkk8kKrOYOmBFIJhjnUZeH5/ziXue6cwaOpWBMNqbJpxnMIgicd5ZinrPV2BYeeB1GXgeyAl/Wcg6e8xP+OYMstiji3WQXv+jAxaj6+1tQKDxrciw+67g8rtXR/vupS1PlVk8MolykNalyP29Myg8T2F4W39OZ7RDNJ4qz7VGFDNi8FTGv5drMxC5o9newDhJ1Ao
+   eJztmOEOwyAIhH1sH79/GyMKhQOhXmK2rJbja4Fu6621ftcxa1SfvJ/t2ymSwUoZGHbnXgY7Bg1nBMMs1woM0nyjGTTixjqZgcq3IoN1fBRDH15Rugx8D6S4DNrnA1JWDKvjpzBw41DHkPpTP2g9kKK+L1n6ZmQYzz21liQ9nJFhthepqj1tncdl4MW3rCXq9w5SK4avvc75zFLWDJQHUn+aS1oPpKT/GUj2e1yfd06ZZXGNLe6D9vnzZtB6fJ2tFRg0vhUZxvrl1ja1x3suZZ1PFRm8amnnIZ3LET09Mmh8T2FY3X+OZzSDNN5sTzUG1PJi8JSGn4qVWcj68VwPrvlMaA==
   </data>
  </layer>
  <layer id="12" name="top_layer" width="49" height="50">

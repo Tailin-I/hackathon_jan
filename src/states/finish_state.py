@@ -36,6 +36,8 @@ class FinishState(BaseState):
 
     def on_enter(self, **kwargs):
         """Вход в меню паузы"""
+        self.sound_manager.stop_music()
+        self.sound_manager.play_effect("lo")
 
     def on_exit(self):
         """Выход из меню паузы"""
@@ -50,13 +52,14 @@ class FinishState(BaseState):
         window_x = self.gsm.window.width // 2
         window_y = self.gsm.window.height // 2
 
-        # Фон окна
-        arcade.draw_rect_filled(
-            arcade.rect.XYWH(
-                window_x, window_y,
-                self.window_width, self.window_height),
-            self.menu_background_color
-        )
+        arcade.draw_texture_rect(
+            self.asset_loader.load_background("end")
+            , arcade.rect.XYWH(
+                self.gsm.window.width // 2,
+                self.gsm.window.height // 2,
+                self.gsm.window.width,
+                self.gsm.window.height,
+            ))
 
         # Рамка окна
         arcade.draw_rect_outline(

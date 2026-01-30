@@ -1,3 +1,6 @@
+import json
+import os
+
 import arcade
 import time
 from typing import List, Dict
@@ -5,6 +8,7 @@ from typing import List, Dict
 from .base_state import BaseState
 from src.core.dialogue_manager import dialogue_manager
 from config import constants as C
+from ..core.dialogue_background_manager import dialogue_bg_manager
 
 
 class DialogueState(BaseState):
@@ -54,6 +58,32 @@ class DialogueState(BaseState):
         self.window_bg_color = (30, 30, 40, 230)
         self.choice_bg_color = (40, 30, 30, 230)
 
+        # Фон диалога
+        self.current_background = None
+        self.background_timer = 0
+        self.background_cooldown = 0.3
+
+        self._init_npc_backgrounds()
+
+    def _init_npc_backgrounds(self):
+        """Инициализирует фоны для NPC из конфига"""
+        config_path = os.path.join(
+            self.rm.get_project_root(),
+            "settings",
+            "dialogue_backgrounds.json"
+        )
+
+        try:
+            if os.path.exists(config_path):
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    npc_backgrounds = json.load(f)
+        except Exception as e:
+            print(f"Ошибка загрузки конфига фонов: {e}")
+            npc_backgrounds = {}
+
+        for npc_name, image_names in npc_backgrounds.items():
+            dialogue_bg_manager.load_backgrounds_for_npc(npc_name, image_names)
+
     def on_enter(self, **kwargs):
         """Начинаем диалог с NPC"""
         self.current_npc = kwargs.get("npc")
@@ -63,7 +93,11 @@ class DialogueState(BaseState):
             self.gsm.pop_overlay()
             return
 
-        self.current_npc_name = self.current_npc.name # так удобнее
+        self.current_npc_name = self.current_npc.name.lower()
+
+        # Сбрасываем фон на первый (индекс 0) при начале диалога
+        dialogue_bg_manager.reset_background(self.current_npc_name)
+        self.current_background = dialogue_bg_manager.get_current_background(self.current_npc_name)
 
         # Собираем всех NPC в сцене (для переключения между ними)
         self._collect_all_npcs()
@@ -148,6 +182,10 @@ class DialogueState(BaseState):
                 self.current_topic = next_topic
                 self._load_dialog()
                 self.state = "npc_speaking"
+
+                # Сбрасываем фон на первый для нового NPC
+                dialogue_bg_manager.reset_background(self.current_npc_name)
+                self.current_background = dialogue_bg_manager.get_current_background(self.current_npc_name)
             else:
                 self.current_topic = next_topic
                 self._load_dialog()
@@ -161,8 +199,6 @@ class DialogueState(BaseState):
         from ..ui.notification_system import notifications as ns
 
         for event in events:
-
-
             event_type = event['type']
             params = event['params']
             try:
@@ -188,7 +224,6 @@ class DialogueState(BaseState):
 
                 elif event_type == "change_property":
                     # change_property:артемий:behavior:aggressive
-
                     npc_name = params[0]
                     property_name = params[1]
                     property_value = params[2]
@@ -238,6 +273,7 @@ class DialogueState(BaseState):
                     ns.notification(f"Задание завершено: {quest_id}")
 
                 elif event_type == "finishgame":
+                    print(456465465465465465465)
                     self.gsm.switch_to("finish")
 
             except Exception as e:
@@ -257,21 +293,37 @@ class DialogueState(BaseState):
 
                 self.displayed_text = current_line[:chars_to_show]
 
-    def draw(self):
-        """Отрисовка диалога"""
-        C.draw_dark_background()
+        # Обновляем таймер для фона
+        if self.background_timer > 0:
+            self.background_timer -= delta_time
 
-        # Окно диалога сверху
+    def draw(self):
+        """Отрисовка диалога с фоном"""
+        # Рисуем фон если он есть
+        if self.current_background:
+            arcade.draw_texture_rect(
+                self.current_background,
+                arcade.rect.XYWH(
+                    self.gsm.window.width // 2,
+                    self.gsm.window.height // 2,
+                    self.gsm.window.width,
+                    self.gsm.window.height
+                )
+            )
+        else:
+            # Или используем стандартный темный фон
+            C.draw_dark_background()
+
+        # Остальная отрисовка диалога
         self._draw_dialog_window()
 
-        # Окно выбора снизу (если нужно)
         if self.state == "player_choosing":
             self._draw_choice_window()
 
     def _draw_dialog_window(self):
         """Окно диалога в верхней части экрана"""
         window_x = C.SCREEN_WIDTH // 2
-        window_y = C.SCREEN_HEIGHT - self.dialog_window_height *0.55
+        window_y = C.SCREEN_HEIGHT - self.dialog_window_height * 0.55
 
         # Фон окна
         arcade.draw_rect_filled(
@@ -308,7 +360,7 @@ class DialogueState(BaseState):
         line_y = window_y + self.dialog_window_height * 0.2
         arcade.draw_line(
             C.SCREEN_WIDTH * 0.15, line_y,
-            C.SCREEN_WIDTH *0.85, line_y,
+            C.SCREEN_WIDTH * 0.85, line_y,
             speaker_color, 1
         )
 
@@ -324,7 +376,7 @@ class DialogueState(BaseState):
         if text_to_display:
             arcade.Text(
                 text_to_display,
-                C.SCREEN_WIDTH*0.14,  # Отступ слева
+                C.SCREEN_WIDTH * 0.14,  # Отступ слева
                 window_y - 30,
                 self.text_color, 20,
                 width=C.SCREEN_WIDTH - 120,
@@ -336,7 +388,7 @@ class DialogueState(BaseState):
             if int(time.time() * 2) % 2 == 0:  # Мигание
                 arcade.Text(
                     "► Нажмите ENTER",
-                    C.SCREEN_WIDTH *0.85,
+                    C.SCREEN_WIDTH * 0.85,
                     window_y - self.dialog_window_height // 2 + 30,
                     self.text_color, 14,
                     anchor_x="right"
@@ -354,7 +406,7 @@ class DialogueState(BaseState):
         arcade.draw_rect_filled(
             arcade.rect.XYWH(
                 window_x, window_y,
-                C.SCREEN_WIDTH*0.7, self.choice_window_height
+                C.SCREEN_WIDTH * 0.7, self.choice_window_height
             ),
             self.choice_bg_color
         )
@@ -363,7 +415,7 @@ class DialogueState(BaseState):
         arcade.draw_rect_outline(
             arcade.rect.XYWH(
                 window_x, window_y,
-                C.SCREEN_WIDTH*0.7, self.choice_window_height
+                C.SCREEN_WIDTH * 0.7, self.choice_window_height
             ),
             self.player_text_color, 2
         )
@@ -424,7 +476,17 @@ class DialogueState(BaseState):
             else:
                 # Перейти к следующей реплике или ответам
                 if self.current_line_index < len(self.dialog_lines) - 1:
-                    # Следующая реплика NPC
+                    # Переход к следующей реплике NPC
+
+                    # МЕНЯЕМ ФОН перед переходом к следующей реплике
+                    if self.background_timer <= 0:
+                        dialogue_bg_manager.next_background(self.current_npc_name)
+                        self.current_background = dialogue_bg_manager.get_current_background(
+                            self.current_npc_name
+                        )
+                        self.background_timer = self.background_cooldown
+
+                    # Переходим к следующей реплике
                     self.current_line_index += 1
                     self.displayed_text = ""
                     self.is_text_complete = False

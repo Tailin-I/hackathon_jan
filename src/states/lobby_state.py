@@ -86,10 +86,10 @@ class LobbyState(BaseState):
 
         # Тень
         arcade.Text(
-            "IT-Кубия",
+            "Россия многонациональна страна",
             title_x + 5, title_y - 5,
             arcade.color.BLACK,
-            font_size=72,
+            font_size=40,
             anchor_x="center",
             anchor_y="center",
             bold=True
@@ -97,10 +97,10 @@ class LobbyState(BaseState):
 
         # Основной текст
         arcade.Text(
-            "IT-Кубия",
+            "Россия многонациональна страна",
             title_x, title_y,
             self.title_color,
-            font_size=72,
+            font_size=40,
             anchor_x="center",
             anchor_y="center",
             bold=True

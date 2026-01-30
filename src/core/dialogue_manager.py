@@ -18,6 +18,8 @@ class DialogueManager:
         # Подключаемся к БД
         self._connect()
 
+
+
     def _connect(self):
         """Устанавливает соединение с базой данных"""
         try:
