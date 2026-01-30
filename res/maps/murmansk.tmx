@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="13">
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="49" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="16">
  <tileset firstgid="1" source="tiles.tsx"/>
  <layer id="2" name="ground" width="49" height="50">
   <data encoding="base64" compression="zlib">
@@ -8,20 +8,35 @@
  </layer>
  <layer id="5" name="containers" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAAAPBsJkgAAQ==
+   eJztzgENAAAIA6A3tX8LY3w6SEDCN9MOAAAAAAAAAAAApyyuFwBg
   </data>
  </layer>
- <objectgroup id="6" name="entities"/>
+ <objectgroup id="6" name="entities">
+  <object id="13" name="валентина cтепановна" type="npc" x="208.667" y="263.333">
+   <properties>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="7" name="events"/>
- <objectgroup id="8" name="zones"/>
+ <objectgroup id="8" name="zones">
+  <object id="15" name="cheat" type="chest" x="283.167" y="24.1973" width="60.6667" height="30.9387">
+   <properties>
+    <property name="lock" value="&gt;"/>
+    <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5, flash_quest:1, sonya_ring:1, blue_boots:1, orc_weapon:1, simple_sword:1"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="10" name="walls" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmktOAzEMhrPhABygRwDEWwgBbXkJhFA3sGDVLfe/AA5tJJTGdpPYg13NJ/0Sako6X+R6RlYnIYTJDuQAcqiUo6BLcrgqrC0Lfy833sVz3fA/NVAOUnhw2GPWPTjsM+seHDgwh2PIGeS0c/+SA1cbtWAON5Ap5K5z/5IDVxu1YA4vkE/IR+f+Q9SSNt56a6nOvTmU6lzTIZ0Z5iDVOzQd0plhDlK9w1stlfDicA65WOcyW/PiMIPMIQ+Q+2zNi8P7Ol+QRbbmxYHCisN3x/5WHHrQcMjvXR4d8nuXR4ec0YFnW4ee57Mah5bP2daBej7j5mvPFdfT8hwoUUvatcIxOqzYZYc0PzoJ/TMkiuTwGNrn09T86DbIzJAokkMkelD95Ql5Hes7cX70Glbzozedy//lr4M00SFef5yDSThg9w5NB2mwe4eGg/S8lkPDQXpey9HiMPQ5c7Q4DH3OHJ6+0xijgw2sOtT0DasONX2DcrDWQzEoB2s9FMNqLdUwOtjgv383JZUfH104pw==
+   eJztmktOAzEMhrPhABygRwDEWwjxfgmEUDewYNUtd4E93BYHGmlkYjsPZxqj+aRf6jRtZ74o44yszpxzs3+QDchmo2y5tgSHo8jYIvJ68edTMscF38mBc9DCgsOaMG7BYV0Yt+CAeYd8DI4ph23IHmS38nwxB2ltSHxCvgbHlMMJ5BxyVnm+mENYG3g+MdJ4gHK4h7xAnhN+g4NbS3g+c8fHwlptja1zaw6xGogdUtd4CmHOKIfa2hHADpprPMwZ5SDtK6lYW0sxrDjsQw6WOURjJQ65+4aGwwXkEnINuUJjJQ65+4aGw9Myr5A5GuMctGrUKu8HrRqV4vBW8ftW7mmOFg5477LogPcuiw6YyUEm1aHm+SzHoeQ8MYfYvsA9n0n9tbuM6yl5Dow55O4LrdeKhMb9MDnU09Ih9I92XH0PiSM43Ljy/jTXPzp1Oj0kjuDg8R5cfbkl3qfqju8fPbjf/tFjm8v/YeigjXfw1+/7YBoO1N7R0kEbau9o4aDVc0mlhYNWzyWVEoex51mixGHseZawdE9TTA590KtDTt3o1SGnbnAOvdVQCs6htxpK0etaymFy6INV/29KK9//pEr3
   </data>
  </layer>
  <layer id="11" name="collisions" width="49" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt2kEOgCAMAEGezfP9AMbUCG7b3YSTh3YIR+cYYxY4mdPA6AvD33eggdHKkM1U1ZCtbIbVrhri8yLfI3M0/J8GRhoYaWC0w3D6TjQw6mQ45Xwzp5OBnAZGGhhpONvdnhpis3bV1UB7e10NtDQwohoiO1U3EG2rqhuypIHR039NWc4FG71nIQ==
+   eJztmNsOgCAMQ/lsPt9XJZNt0MEGa0KiUVoO4aa1lFKzsMVSvZxKXI+0ZycDMsNSCAaubjLI8tFjqfX780ZlUz4oT85vBQPnL83fwdA+4+ruVrS1tdfXJzEgebi9HZlzGoOFIu5xVAbC46+tIwzaNTcZvp5aBtQY2/0NtIph9twcYU5z/hZn7949Wskgz7DUTQyz64bFu+861J6kGdPt/kMVTXu0kjKgc5FCzIdkmJclw+icGMmfzfHCQGVSbdCsOzsYrLytz7/WfYTUSobVfXIrg7exdyuDNyWDD3ll0J79T2bwyEbpdIYoSgYfkvxXiVAegvK7CQ==
   </data>
  </layer>
  <layer id="12" name="top_layer" width="49" height="50">

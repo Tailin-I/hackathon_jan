@@ -53,7 +53,7 @@
   </object>
  </objectgroup>
  <objectgroup id="7" name="entities">
-  <object id="1" name="Алина" type="npc" x="308" y="209.33">
+  <object id="1" name="валентина степановна" type="npc" x="308" y="209.33">
    <properties>
     <property name="loot" value="healing_potion:35"/>
     <property name="speed" type="int" value="1"/>
