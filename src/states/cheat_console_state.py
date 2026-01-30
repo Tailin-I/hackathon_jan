@@ -15,7 +15,7 @@ class CheatConsoleState(BaseState):
         self.input_buffer = "|"  # Введенный текст
         self.cursor_visible = True
         self.can_close = False
-        self.history = ["TP_10_10_itcube0", "TP_10_10_itcube2floor"]  # История команд
+        self.history = ["TP_15_10_moscow"]  # История команд
 
         self.count_to_text = 0
 
