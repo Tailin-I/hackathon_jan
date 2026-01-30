@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="23" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="9" nextobjectid="13">
+ <tileset firstgid="1" source="tiles.tsx"/>
+ <layer id="1" name="ground" width="23" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBg4BjFQw6zoGFqm01Ldw9Fs0fxKB7FoxgAP80ORQ==
+  </data>
+ </layer>
+ <layer id="2" name="walls" width="23" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYWBgYKEhpgXgG6Jm0yJMBGhotjwQK9DIbBAQo6HZqjQ0m2HU7FGzR80e1GbTCgMAwZ0B5w==
+  </data>
+ </layer>
+ <layer id="3" name="containers" width="23" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUkAsUB9oBo2AUjAAwWPIZAJqoAEM=
+  </data>
+ </layer>
+ <layer id="4" name="collisions" width="23" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZWBgYKUhphUYimZTM0xoGd4wc+SBWIFGZiPzaWG2KpXNxmbXqNmjZo+aPTjNphUGACGMAhg=
+  </data>
+ </layer>
+ <layer id="8" name="top_layer" width="23" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGASEAAAcwAAE=
+  </data>
+ </layer>
+ <objectgroup id="5" name="zones">
+  <object id="2" name="Alina's zone" type="zone" x="63.3332" y="644.667" width="1024" height="588"/>
+  <object id="6" name="Artemi's zome" type="zone" x="1145.76" y="252.425" width="263.152" height="501.817"/>
+  <object id="9" name="Slava's zone" type="zone" x="61.6766" y="68.9226" width="448.714" height="367.982"/>
+ </objectgroup>
+ <objectgroup id="6" name="events">
+  <object id="7" name="to 1 floor" type="teleport" x="1362.67" y="68" width="105.333" height="130.667">
+   <properties>
+    <property name="target_map" value="itcube1floor"/>
+    <property name="target_x" type="int" value="68"/>
+    <property name="target_y" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="8" name="just_a_chest" type="chest" x="689.667" y="1080.67" width="210" height="136">
+   <properties>
+    <property name="lock" value="&lt;&lt;&gt;&gt;"/>
+    <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5"/>
+   </properties>
+  </object>
+  <object id="11" name="fatigue_killer_chest" type="chest" x="831.383" y="1083.66" width="210" height="136">
+   <properties>
+    <property name="lock" value="&gt;&gt;&gt;&gt;&lt;&gt;"/>
+    <property name="loot" value="fatigue_killer:7"/>
+   </properties>
+  </object>
+  <object id="12" name="cheat" type="chest" x="69.631" y="511.594" width="210" height="211.272">
+   <properties>
+    <property name="lock" value="&gt;"/>
+    <property name="loot" value="healing_potion:3, key_door1:1, fatigue_killer:5, flash_quest:1, sonya_ring:1, blue_boots:1, orc_weapon:1, simple_sword:1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="entities">
+  <object id="1" name="Алина" type="npc" x="508" y="1109.33">
+   <properties>
+    <property name="loot" value="healing_potion:35"/>
+    <property name="speed" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="5" name="Артемий" type="npc" x="1272" y="414.667">
+   <properties>
+    <property name="exp" type="int" value="69"/>
+    <property name="max_health" type="int" value="50"/>
+    <property name="scale" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="10" name="dobro" type="npc" x="224.31" y="215.278">
+   <properties>
+    <property name="chase_speed" type="int" value="40"/>
+    <property name="damage" type="int" value="1000"/>
+    <property name="exp" type="int" value="10000"/>
+    <property name="imp" type="bool" value="false"/>
+    <property name="max_health" type="int" value="999"/>
+    <property name="speed" type="int" value="1"/>
+    <property name="vision_range" type="int" value="1000"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>

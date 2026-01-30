@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="160" height="40" tilewidth="64" tileheight="64" infinite="0" nextlayerid="10" nextobjectid="13">
+ <tileset firstgid="1" source="tiles.tsx"/>
+ <layer id="2" name="ground" width="160" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmt2OhCAMRr1gJ/r+L7w7yTYhhEJbKkr5Lk5mx1X86edxBM7jOE4AAAjG54+fxie3XVLuIzl9ep+/9DyirDdyXbyXfWllr1VvzfmmrE0rH+U+kb818jfLf9TmZUByPyB/a+Zvlv++7VGWtNm7/reH/+Llb6b/ykxJs0f5g//i5I9qOdt/0gyW/4f/YuUvz+Fs//UyWFsO/8XM31P+I2r9LLX14L+Y+XvSf+S6MoNc/uC/ePl70n/a56/2Gl/Zfrl76e15uSN/+TW5FO1F8p/l/UPrP+t1jrzeedjvyyj+s/a/wH8+9djZfyP9z/CfTz129d/o+Bv851OPHf3nMf8A/vOpx47+85qDpckf/MfXfHX/rYDkOu+I5L6cWSOL/wAAYFfuGIud2T64h97zVPJpyUcaAPmLA70nWpH+5qvlL+8nkdDq00P+1oRqavEebWfNn8aftN9UtKFxJPDF4/mV95dxc564uU2j/svnVPeylx+rpH3wDnp1yT2W9/O0sncdfv4rM1Y7Pvob+VuPXl1q8zi5DJZzUrz8R5QZLL8jf+uh9R+Xwdp3T//lx3My7SJ/62HxX+1ZW5tj4u0/gss08rceVv8RiVkO/wFL3bmavsF/+P0Xj1V+/+H9NyYrvP+i/y8ub+//Gxn/0JwneAaN/2aPf2D8Nz4a/905/ls7Lo/xQ/BupP6zgjnPoIXEfzPm/wEAwA78AhWnveQ=
+  </data>
+ </layer>
+ <layer id="3" name="walls" width="160" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmk9rwzAMxUNOO46yHnbqKOT7f8Wth1CTyfazI1t/oh8Yiqs4zrPok0LXZVnWGDEEBwIax81+36+/8VP4zP0cVuJSLRZiTvrcajFW8m9L5qjPo87tQcQ9iDhqPSruNfck7nsn1rsDcdvyn3RO+tx2KB3T/GvR+agLN5TOn5Vras/xPMTdiDXSudbzpdaj4jZizVty/UrMleJqoPnMPXfcH6Vjmn+ozpR+3KT3oPKq5L+55+j9ndQeh/6O1/KZey78t7weGiflv+j+rPhvLsZK/qFxqP+i60n5b6u/5ZDw3w9wf5bqP7T/Rf2Xq28cFYf6mxf/1V7/cfsv2n+E//YR/vvGov+i+0PjpPvf3N4s5t+aGS+89L8951vSRbv/aq//UtA5Civ9b8/5ntGFG2/1X0ppDvVftG635L+lufDfPlp1Rv0X7T9qaIorzWn3XyRWgqv6b2/9h8zN4Kr1n5f+l7v+0+6/Xuo/L/1vT1z4Lz/S/mspzrL/cqw3gsg/PM5q/h1H6bsZI3d/ap7jOSzHtWiC3m/mme7fSaNlH97QrGuaf6P7Wq7/EwVtaNY1zb/RfS21fk9fGrShWdfwX/9o1lVT/gXXY2b9h+wl4EezrjPrv+g/ZNCs60z/jf5DBs26aqr/tOzDG5p11ZZ/HO/Yr4IHvTy9f9ag50y49Kr9724knt4/R/71XV/7391ItPwOv4j8a8ODXpF/dvHmv5brv+8T11rmzHNr89+o/2zhQa/wX7t4819pIv/aiP6Xl8i/NjzoxfEOPUaMM+MXwtQ4NA==
+  </data>
+ </layer>
+ <layer id="4" name="collisions" width="160" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmGtuxCAMhHOL3P+m/btFmNhk8CvzSWgrcLFjJpns3td13RwcgUODNg7N/fO5+ht9HVXiZtc+9icCTd5q+hvnpHXtfppzqxA3IvXKk1Xts7k3fUGzc/+inweIOOk+0f7Pbt5Z3FNf0HOztVlt1vsoSn9a/925TqmGCnH037Oc8l9L3ghftdQnrVn2Q9NNf9q4Lv57QqeR/ivVhrh/0Xj4byadvonr4r/a53ik/p7q0u5tiaP/7kH//b9WzX/f5J3FZfdfTWwEKz8dx1O8tK7N6xm3c76rvniz47+7/oHG8l6wmpP2tsRl99+dOQ929Lfao4r+Muhgtubhv2/6gp7r7r/SXBf/3Ymr/PxD7HeCKv4r7eHp05X11+X9z8NXtXH03zWWc66kP+t+Ug3V4io//xD7nSDafyvFUX94qD99XFX9jWO15jGk/LN5xHVUjpN6ck3WtPk8z3SsN4osdXQjc19n2vTIJeUneDL3lfrrT+a+0n/7k7mvmfRHvoen/2pqIXgy95Xvf/3J3FfPZx71F0PmvkZ77i9Z6uhG5r5m0x/iN/av0KFfnd7/MvTTE1S/ns7lJNRfXZD6Q+9tqSHLuVF/Njr0i/qrC/13P5eUn/iRzX+r6+9r+u3QL/pvXbr5bzTUnw1+/8VC/dno0C/Eb+gcHG/GH7XgbOU=
+  </data>
+ </layer>
+ <layer id="5" name="containers" width="160" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2DENAAAIBLG3gn+TjOCAkLQKbr4E+KCuAwAAAABg8asAAAAAAAAAAAAAAAAAAAAAAAAARgPSQgBD
+  </data>
+ </layer>
+ <objectgroup id="6" name="entities">
+  <object id="2" name="миша" type="npc" x="9448" y="1924">
+   <properties>
+    <property name="active_topic" value="grrr"/>
+    <property name="damage" type="int" value="40"/>
+    <property name="imp" type="bool" value="false"/>
+    <property name="loot" value="flash_quest:1, healing_potion:1"/>
+    <property name="max_health" type="int" value="1000"/>
+    <property name="scale" type="int" value="7"/>
+    <property name="speed" type="int" value="1"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="4" name="марк" type="npc" x="1036" y="1840">
+   <properties>
+    <property name="damage" type="int" value="21"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="loot" value="flash_quest:1"/>
+    <property name="max_health" type="int" value="700"/>
+    <property name="scale" type="int" value="1"/>
+    <property name="speed" type="int" value="3"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="6" name="олег" type="npc" x="1680.67" y="697.333">
+   <properties>
+    <property name="damage" type="int" value="50"/>
+    <property name="exp" type="int" value="1500"/>
+    <property name="loot" value="flash_quest:1"/>
+    <property name="max_health" type="int" value="2000"/>
+    <property name="scale" type="int" value="3"/>
+    <property name="speed" type="int" value="4"/>
+    <property name="vision_range" type="int" value="800"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="10" name="bug" type="bug" x="4834" y="558">
+   <properties>
+    <property name="damage" type="int" value="3"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="loot" value="healing_potion:1"/>
+    <property name="max_health" type="int" value="150"/>
+    <property name="scale" type="int" value="1"/>
+    <property name="speed" type="int" value="3"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="9" name="top_layer" width="160" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt28tqwzAQBdCsUwiBQv//U7voMnIt2ZY0Gp+zCo6MXoE7Ms7jAez5qfjcw7vyWsu938eH86E0/95rcsTemp1Z58zO7O/WvRF/H73tzbl2nUes35k+7Dk9yN+yVfKXY+TvGFnqP3u+puj1n/wtk7+5yV9a2PM1Zan/rhY9f7OIXv/NIn9pYc/JRP6Oof4rk79jZKn/7DkAQLtn0P5L1/8ba+08rm73NbBd6but9rX99TCzb9jT+4y49U6LcykAzPOaPYCkVllXtRiZOX8AAPyJ8t6d58/35P+bwF1FyV/uKUr+rl7/rfKc/yp3my85yV9mipK/AMA4v3+wDM8=
+  </data>
+ </layer>
+ <objectgroup id="7" name="events">
+  <object id="7" name="just_a_chest" type="chest" x="4679" y="72" width="310" height="170">
+   <properties>
+    <property name="lock" value="&lt;&lt;&gt;&gt;"/>
+    <property name="loot" value="healing_potion:3"/>
+   </properties>
+  </object>
+  <object id="8" name="to 1 floor left" type="teleport" x="3094.33" y="2146" width="105.333" height="130.667">
+   <properties>
+    <property name="target_map" value="itcube1floor"/>
+    <property name="target_x" type="int" value="56"/>
+    <property name="target_y" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="9" name="to 1 floor right" type="teleport" x="7095.33" y="2158.67" width="105.333" height="130.667">
+   <properties>
+    <property name="target_map" value="itcube1floor"/>
+    <property name="target_x" type="int" value="108"/>
+    <property name="target_y" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="12" name="super_chest" type="chest" x="9665" y="331" width="208" height="418">
+   <properties>
+    <property name="lock" value="&lt;&lt;&gt;&gt;"/>
+    <property name="loot" value="healing_potion:6, sonya_ring:1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="zones">
+  <object id="1" name="Misha's zone" type="zone" x="8906" y="1362" width="1054" height="1082"/>
+  <object id="3" name="Mark's zone" type="zone" x="575" y="1405" width="962" height="946"/>
+  <object id="5" name="Oleg's zone" type="zone" x="1027" y="123" width="1218" height="1026"/>
+  <object id="11" name="bug1's zone" type="zone" x="4523" y="19" width="602" height="1188.67"/>
+ </objectgroup>
+</map>

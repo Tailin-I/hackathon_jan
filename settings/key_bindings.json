@@ -1,0 +1,52 @@
+{
+    "up": [
+        "W",
+        "UP"
+    ],
+    "down": [
+        "S",
+        "DOWN"
+    ],
+    "left": [
+        "A",
+        "LEFT"
+    ],
+    "right": [
+        "D",
+        "RIGHT"
+    ],
+    "attack": [
+        "C"
+    ],
+    "select": [
+        "ENTER"
+    ],
+    "escape": [
+        "ESCAPE"
+    ],
+    "stats": [
+        "B"
+    ],
+    "inventory": [
+        "I",
+        "TAB"
+    ],
+    "heal": [
+        "H"
+    ],
+    "cheat_console": [
+        "F2"
+    ],
+    "ghost_mode": [
+        "NUM_0"
+    ],
+    "debug_mode": [
+        "NUM_1"
+    ],
+    "show_area_mode": [
+        "NUM_2"
+    ],
+    "debug_pause": [
+        "NUM_9"
+    ]
+}

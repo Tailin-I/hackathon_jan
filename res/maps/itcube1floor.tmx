@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="left-down" width="161" height="40" tilewidth="64" tileheight="64" infinite="0" nextlayerid="10" nextobjectid="26">
+ <tileset firstgid="1" source="tiles.tsx"/>
+ <layer id="2" name="ground" width="161" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2kEKgzAQBVAXtuj9L9wuGpAiCCZxRvMWj5YsbMJ8finpMk3TAnDC+2s9eI3eI892lL81wR55Nj1IjblirdCD1GiRQT1IDT1IND1IND1IND1ItB49uF2PPh/59ejB1095H31GcuvVgyV/csjW3Fh57t7vj23+fCfT0l4f6kGutJdBPciV9CDR9CAZ6UEAAAA4r/Ud4v9d4tFnRJ+fXGr+QyFPtCCDRJNBoskg0WSQaDI4tgwzlMGxZZihDI4twwxl8P5a3i1E7b/lGveSYYYyOLYMM5TBsZkhwNg+XK7Gig==
+  </data>
+ </layer>
+ <layer id="3" name="walls" width="161" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztW9lqwzAQNHlsSSmhLXlrKBTy/1/YCCJqjGzvqbWkGViCZWlGx9TWyvQ0TdMJgQgOCqj1rGHdP0o9q7Fu8ZwF986zX8l45+1LGmtlW33dw54WPKjj4vBo1nGP26JegkUf9ziW9+FBHReFx9p70yR/Dlr3wWJs8KCOqxaPhtt73SQ+nLeBB3VcXJ7fZ1iUHX3dtgAP2nFxeT4e8WlUdvR1owIe1HHV4tFwU+pZ7Vm5PHlfCw/KuWrxaLhreXDvrGntPjyo46rFo+HW9IF6hqhB7x6Unsm3mpNwxis5W7E6j5ljBA9K+FrNSaTjjQQ8qNOsxUPlhgd9AA/SueFBH8CDdG540AcRHrRC0vp+xM2JW1p2BLw/f+FBnSaFZ5nfWqF1D+a/TXhQp1mLh8rdkgcTviZ4UKtpycM9e+vBg+kdsXWmuXbPM6i6e/VK92uMyVNjjZs61hrj146vJjiaEf3zxmUWEeDO6dr/AGw9t6ka8OCYSHPqlStl3rV1K31zhAfHQ5rT9O3v5sCdedfWrfTNER4cDzXm9OjvYgDIwHNwTOA5CA9GI9KDyEmAhDynpW/ZVmUj5CSXKf6crQWU5ijPael8xqqshXcx51vAkc/frfrI7XML80Kt1+pz0LttlAZn7bw1NIAH9W25Gmkv9DMr514v+ai6EkTuB3vKSe4711wdKbLGcs/FvV7yUXUliNwP9pSTJNwXodGRAu9inUbrHkwoeS/h+og3ho4UUR5MuFbQkGIkD3q1jdLofT9Y6gs8qEPLOUnEfrCnnMS7LVejxZzEE6PkJJ5tozR692CpHuI/Xh7xeoB+jBZ/vAUbNQ==
+  </data>
+ </layer>
+ <layer id="4" name="collisions" width="161" height="40" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztmFGOgzAMBbkF979pxVclCsXJc5zYzEjWqln0nIZRE9i3bdspanJZsF7njff8LNd5fdeRa7b6fbOCg1pWVI6SjYM6OKhl46AODmrZOKhTycGr9e4dW/2+WcFBLas1Bwd/wUEtKypHycZBHRzUsnFQBwe1bBzUUebX+04+63mw9/vO5A0O9uRldtAythI4qPWMyrFm4+AYcNCejYNjwEF7Ng6OIbuDo54LcDCOCg6OILuDPc/uONgOe/EzOKj1jMqxZmdz8O59JrVm3d2zq/G7a1euaFp6zphfdSLW1NoDB9/JyPu+n/4+9cbBdzJyD3zKxkE4YC/GQfiCg++E30EcnM1MBzkPwsH5HeL5fx5jOAj/+OeJ11iGvbjK+3evObbOOcO6WK+r/Du40lp751VZFxzUuTtbtX4+51n79sB5sKaD0XleDlpyPc+DOOhPZgdHwl4cxywHq/So7uBKa+2dl/U8eDUXHNTI/kxiyeU8GNNnlR7Vz4M46A8Oaj12ilqgPpMYWwQ=
+  </data>
+ </layer>
+ <layer id="5" name="containers" width="161" height="40" opacity="0.9">
+  <data encoding="base64" compression="zlib">
+   eJztzjERAAAEAEAtzPqXFMHiWP4TfAQAAAAAAAAAAAAAAADb8jsAAAAAAAAAAAAAAACcqe8ADBpPQwA5
+  </data>
+ </layer>
+ <objectgroup id="6" name="entities">
+  <object id="2" name="артемий" type="npc" x="6179" y="668">
+   <properties>
+    <property name="damage" type="int" value="0"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="max_health" type="int" value="700"/>
+    <property name="speed" type="int" value="0"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="3" name="марина александровна" type="npc" x="5730.67" y="1084">
+   <properties>
+    <property name="damage" type="int" value="0"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="imp" type="bool" value="true"/>
+    <property name="max_health" type="int" value="700"/>
+    <property name="speed" type="int" value="0"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="7" name="dobro" type="npc" x="6565" y="343">
+   <properties>
+    <property name="damage" type="int" value="1000"/>
+    <property name="exp" type="int" value="10000"/>
+    <property name="max_health" type="int" value="1"/>
+    <property name="speed" type="int" value="0"/>
+    <property name="vision_range" type="int" value="300"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="11" name="класс" type="npc" x="288.242" y="180.667">
+   <properties>
+    <property name="damage" type="int" value="0"/>
+    <property name="speed" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="16" name="алина" type="npc" x="6822.67" y="666.333">
+   <properties>
+    <property name="damage" type="int" value="0"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="max_health" type="int" value="700"/>
+    <property name="speed" type="int" value="0"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="17" name="соня" type="npc" x="6245.67" y="343">
+   <properties>
+    <property name="damage" type="int" value="0"/>
+    <property name="exp" type="int" value="700"/>
+    <property name="max_health" type="int" value="700"/>
+    <property name="speed" type="int" value="0"/>
+    <property name="vision_range" type="int" value="700"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="23" name="bug" type="bug" x="2735" y="2175">
+   <properties>
+    <property name="damage" type="int" value="3"/>
+    <property name="exp" type="int" value="1"/>
+    <property name="health" type="int" value="1"/>
+    <property name="max_health" type="int" value="150"/>
+    <property name="scale" type="int" value="1"/>
+    <property name="speed" type="int" value="3"/>
+    <property name="vision_range" type="int" value="50"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="9" name="top_layer" width="161" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2UsKgzAQANCsLRRXvf9Ri7QLLaEamWZMeQ9cOEr8gcynFAAAoIfHe4uKAQAAtFCTAAAAvc3ZN8CQ7oFrqWUBgBFNF7/u3nm14z2e6Zawdi1+NAaZflUr7a1r5ggALFp6wJH9Yl56vFPfjatSk7BWm2VHx+Cb2v8oOga0yZrPZDPDIMJctvlQ636GjHxQTcKafBAAzouYQ+gP/pcRa5KMfFBNAgDApycvNwZv
+  </data>
+ </layer>
+ <objectgroup id="7" name="events">
+  <object id="1" name="just_a_chest" type="chest" x="9670.33" y="2325.67" width="310" height="170">
+   <properties>
+    <property name="lock" value="&gt;&gt;&gt;&lt;&gt;"/>
+    <property name="loot" value="healing_potion:1"/>
+   </properties>
+  </object>
+  <object id="8" name="no escape" type="notification" x="4209.83" y="2442.5" width="310" height="92">
+   <properties>
+    <property name="text" value="ещё не время уходить"/>
+   </properties>
+  </object>
+  <object id="9" name="go_back" type="notification" x="3527" y="1298" width="60" height="564">
+   <properties>
+    <property name="condition" value="dialog:марина александровна:greeting"/>
+    <property name="text" value="Похоже мне в другую сторону"/>
+   </properties>
+  </object>
+  <object id="14" name="to 2 floor right" type="teleport" x="7100.79" y="2152.76" width="105.333" height="130.667">
+   <properties>
+    <property name="target_map" value="itcube2floor"/>
+    <property name="target_x" type="int" value="108"/>
+    <property name="target_y" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="13" name="to 2 floor left" type="teleport" x="3421.33" y="2140.67" width="105.333" height="130.667">
+   <properties>
+    <property name="target_map" value="itcube2floor"/>
+    <property name="target_x" type="int" value="52"/>
+    <property name="target_y" type="int" value="6"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="zones">
+  <object id="5" name="Slava's zone" type="zone" x="6360.33" y="217.667" width="343.333" height="280.667"/>
+  <object id="4" name="MA zone" type="zone" x="5629.67" y="1019" width="240.667" height="187.333"/>
+  <object id="6" name="Artemi's zone" type="zone" x="6021.67" y="553" width="343.333" height="280.667"/>
+  <object id="12" name="zone1" type="zone" x="73.6059" y="60.879" width="561.879" height="169.151"/>
+  <object id="15" name="Alina's zone" type="zone" x="6669.67" y="553" width="343.333" height="280.667"/>
+  <object id="20" name="Sonya's zone" type="zone" x="6015.33" y="215.667" width="343.333" height="280.667"/>
+  <object id="25" name="1 health bug's zone" type="zone" x="2662" y="1988.66" width="362" height="433.67"/>
+ </objectgroup>
+</map>
